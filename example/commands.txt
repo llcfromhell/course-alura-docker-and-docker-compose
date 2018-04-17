@@ -1,0 +1,50 @@
+# create a container with the give image
+docker run IMAGE_NAME
+
+# show running containers
+docker ps
+
+# show ALL containers
+docker ps -a
+
+# create a container and connects to the terminal
+docker run -it IMAGE_NAME
+
+# starts an already created container
+docker start CONTAINER_ID
+
+# creates a container with the given name
+docker run IMAGE_NAME --name CONTAINER_NAME
+
+# show images
+docker images
+
+# remove image
+docker rmi IMAGE_ID
+
+# create container on detached mode
+docker run -d IMAGE_NAME
+
+# create container forwarding ports (first is host image, second is container image)
+docker run -p 8080:3030 IMAGE_NAME
+
+# create container with given environment variable
+docker run -e ENV="prod" IMAGE_NAME
+
+# remove all stopped containers
+docker container prune
+
+# get container info
+docker inspect CONTAINER_ID
+
+# crate container with the give directory mapped to the host directory (first is host dir, second is container path)
+docker run -v "/home/lourenco.cunha/
+
+# create image from Dockerfile
+docker build -f Dockerfile -t DOCKER_HUB_USER/IMAGE_NAME .
+
+# log into docker hub
+docker login
+
+# push image to docker hub
+docker push DOCKER_HUB_USER/IMAGE_NAME
