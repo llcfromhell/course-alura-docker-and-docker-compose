@@ -31,6 +31,9 @@ docker run -p 8080:3030 IMAGE_NAME
 # create container with given environment variable
 docker run -e ENV="prod" IMAGE_NAME
 
+# stop ALL running containers
+docker stop $(docker ps -q)
+
 # remove all stopped containers
 docker container prune
 
