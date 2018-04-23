@@ -48,3 +48,15 @@ docker login
 
 # push image to docker hub
 docker push DOCKER_HUB_USER/IMAGE_NAME
+
+# create a custom network
+docker network create --driver bridge NETWORK_NAME
+
+# list networks
+docker network ls
+
+# create container in a custom network
+docker run --network NETWORK_NAME
+
+# install ping in ubuntu images
+apt-get install iputils-ping
