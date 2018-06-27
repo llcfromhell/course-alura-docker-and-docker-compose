@@ -63,3 +63,15 @@ docker run --network NETWORK_NAME
 
 # install ping in ubuntu images
 apt-get install iputils-ping
+
+# create and build all necessary images
+docker-compose build
+
+# create and start services
+docker-compose up
+
+# stop and remove services
+docker-compose down
+
+# testing the containers with a ping call
+docker exec -it alura-books-1 ping node2
